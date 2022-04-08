@@ -4,9 +4,9 @@ const devConfig = require("./webpack.client.dev");
 module.exports = merge(devConfig, {
   devServer: {
     hot: true,
-    contentBase: "/public/",
+    open: true,
     port: 8090,
-    inline: true,
+    historyApiFallback: true,
     headers: { "Access-Control-Allow-Origin": "*" },
     open: true
   },
